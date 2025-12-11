@@ -61,4 +61,4 @@ If you’d like to add an optimization or fix a bug:
 
 **Moza**
 
-> “Hesitation is Defeat”
+> “A true warrior has no need for a sword.”
