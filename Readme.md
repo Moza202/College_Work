@@ -27,7 +27,7 @@ This repository is designed for revision and understanding core concepts. It inc
 |                           | Stack (Dynamic)       | Flexible memory usage using Linked Lists.                 | [🔗 View Code](./Stack_using_linkedlist.cpp)|
 |                           | Circular Queue        | Array-based with bulk enqueue/dequeue logic.              | [🔗 View Code](./Queue.cpp)               |
 | **Non-Linear Structures** | Binary Search Tree    | Insertion, Deletion, Search, Size, and Depth logic.       | [🔗 View Code](./Tree.cpp)                |
-| **Resources** | **Study Guide** | **Sorting Algos**, **STL** (Vector/Map), & **Complexity**.| [🔗 View Guide](./Help.txt)               |
+| **Resources** | **Study Guide** | **Sorting Algos**, **STL** (Vector/Map), & **Complexity**.| [🔗 View Guide](./Help)               |
 
 ---
 
