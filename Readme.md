@@ -10,20 +10,20 @@ The code provided here covers the implementation of various linear and non-linea
 ### 1. Linked Lists
 Implementations of different types of linked lists with various operations (Insertion, Deletion, Reversal, Searching).
 * **`Linked_list1.cpp`**: A comprehensive Singly Linked List implementation including advanced operations like finding min/max, copying lists, and updating specific nodes.
-* **`Doublylinkedlist.cpp`**: Implementation of a Doubly Linked List allowing bidirectional traversal[cite: 3].
-* **`CLL.cpp`**: Circular Linked List implementation where the tail points back to the head[cite: 1].
+* **`Doublylinkedlist.cpp`**: Implementation of a Doubly Linked List allowing bidirectional traversal.
+* **`CLL.cpp`**: Circular Linked List implementation where the tail points back to the head.
 
 ### 2. Stacks
 * **`Stack_using_array.cpp`**: Stack implementation using fixed-size arrays.
-    * *Applications included:* Parenthesis balancing, String reversal, Palindrome checking, Decimal to Binary conversion, and Infix to Postfix expression conversion/evaluation[cite: 5].
-* **`Stack_using_linkedlist.cpp`**: Dynamic Stack implementation using a linked list to handle flexible memory usage[cite: 2].
+    * *Applications included:* Parenthesis balancing, String reversal, Palindrome checking, Decimal to Binary conversion, and Infix to Postfix expression conversion/evaluation.
+* **`Stack_using_linkedlist.cpp`**: Dynamic Stack implementation using a linked list to handle flexible memory usage.
 
 ### 3. Queues
-* **`Queue.cpp`**: Implementation of a **Circular Queue** using arrays. [cite_start]Includes features for bulk enqueue/dequeue operations and available space calculation[cite: 7].
+* **`Queue.cpp`**: Implementation of a **Circular Queue** using arrays. [cite_start]Includes features for bulk enqueue/dequeue operations and available space calculation.
 
 ### 4. Trees
 * **`Tree.cpp`**: Binary Search Tree (BST) implementation.
-    * *Features:* Insertion, Deletion (handling all cases), Search, Tree Size, Max Depth, and Traversals (Inorder, Preorder, Postorder)[cite: 6].
+    * *Features:* Insertion, Deletion (handling all cases), Search, Tree Size, Max Depth, and Traversals (Inorder, Preorder, Postorder).
 
 ### 5. Help.txt (Study Guide & Cheat Sheet)
 A comprehensive reference file (`Help.txt`) compiled to aid in revision and understanding of core concepts. It includes:
