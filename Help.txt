@@ -1,0 +1,280 @@
+void mini(int arr[], int n)
+{
+    int idx;
+for (int i = 0; i < n - 1; i++)
+    {
+        idx = i;
+for (int j = i + 1; j < n; j++)
+        {
+            if (arr[j] < arr[idx])
+                idx = j;
+}
+        swap(arr[idx], arr[i]);
+}
+}
+ // دالة لترتيب عناصر الاراي تصاعديا
+------------------------------------------------------------------------------------------------
+     odd_cnt = (n + 1) / 2 // حساب عدد الاعداد الفردية من 1 لحد ال (n)
+     2k-1 = or 2k + 1  odd_num ;
+2k = even_num    
+------------------------------------------------------------------------------------------------
+    string decimal_to_base(int n, int base)
+{
+    string num = "";
+while (n)
+    {
+        int rem = n % base;
+num += char((rem < 10 ? rem + '0' : (rem - 10 + 'A')));
+        n /= base;
+}
+    reverse(num.begin(), num.end());
+    return num;
+}
+------------------------------------------------------------------------------------------------
+int base_to_decimal(string num, int base)
+{
+    int n = 0;
+for (int i = 0; i < num.size(); i++)
+    {
+        n *= base;
+n += (isdigit(num[i]) ? num[i] - '0' : num[i] - 'A' + 10);
+    }
+    return n;
+}
+
+-------------------------------------------------------------------------------------
+//   Vector    \\ 
+push_back() == emplace_back() --> بنضيف عنصر في اخر الاراي 
+pop_back() --> بيمسح اخر عنصر ف الفيكتور
+swap() --> بيبدل الداتا by refernce
+front() --> اول عنصر في الفيكتور
+back() -->  اخر عنصر في الفيكتور
+Size() --> عدد العناصر في الفيكتور
+empty() --> بترجع 1 لو الفيكتور فاضي و 0 لو فيه عناصر
+insert()   --> بتسمحلي اضيف اي مكان ف الفيكتور
+emplace() --> زيها زي الانسيرت بس اسرع 
+erase() --> بتمسحلي العناصر من اي مكان او في فتره محدده
+reverse() --> بتعكس الفيكتور
+*min_element() --> بتجيب اصغر عنصر في الفيكتور خلال الفتره اللي بديهالها
+*max_element() --> بتجيب اكبر عنصر في 
+الفيكتور خلال الفتره اللي بديهالها
+find_if() --> بتدور ع العنصر اللي بديهولها في فتره معينة تبعا لشرط معين بس لازم تكون الفيكتور مترتبه 
+--------------------------------------------------------------------------------------------------------
+// Deque \\
+push_front() == emplace_front() --> بيضيف عنصر في بدايه الاراي
+--------------------------------------------------------------------------------------------------------
+bool is_prime(int x)
+{
+    if (x < 2)
+        return false;
+for (int i = 2; i * i <= x; ++i)
+    {
+        if (x % i == 0)
+            return false;
+}
+    return true;
+}
+                             prime checking
+________________________________________________________________________________________________________
+  // int a = 3, b = 7, temp;
+// cout << "Before swapping:" << nl;
+    // cout << "a = " << a << " b = " << b << nl;
+// temp = a;
+    // a = b;
+    // b = temp;
+
+    // cout << "After swapping:" << nl;
+// cout << "a = " << a << " b = " << b << nl;
+هنا بنبدل عنصرين بس من غير الدالة بتاعت اللغه باستخدام فكرة الثلاث صناديق 
+____________________________________________________________________________________________________________    
+- **Ordered Containers:**
+  - Implemented using self-balancing binary search trees (typically **Red-Black Trees**).
+- Maintain elements in a sorted order based on keys.
+- Provide log-time performance: **O(log n)** for insertions, deletions, and lookups.
+  - Support operations like `lower_bound()`, `upper_bound()`, and in-order traversal.
+- Examples: `std::map`, `std::set`, `std::multimap`, `std::multiset`.
+
+- **Unordered Containers:**
+  - Implemented using **hash tables**.
+- Do not maintain any specific order of elements.
+  - Offer average constant-time performance: **O(1)** for insertions, deletions, and lookups, but worst-case is **O(n)** if many hash collisions occur.
+- Do not support range-based queries or sorting-based operations.
+  - Examples: `std::unordered_map`, `std::unordered_set`, `std::unordered_multimap`, `std::unordered_multiset`.
+**Use Cases:**
+- Use **unordered containers** when performance is critical and element order is irrelevant—e.g., fast lookups in hash tables (`unordered_map` for dictionary-like access).
+- Use **ordered containers** when you need elements in a sorted sequence or rely on range-based operations—e.g., maintaining a sorted leaderboard (`set` or `map`).
+**Edge Considerations:**
+- Unordered containers typically use more memory due to hash table overhead.
+- Ordered containers provide predictable traversal order and better worst-case performance.
+طبعا الكلام الجامد ده مش بتاعي اكيد بس المقارنه مهمه بالنسبالي والكلام مفيد وشكله مهم وهو منسق كدا
+_________________________________________________________________________________________________________________________________________________________________________________________
+
+Pair -------> <-----------
+
+بيستقبل قيمتين مثلا 
+pair<string,int> p 
+
+p.first --------> هينده ع السترينج 
+p.second -------> هينده ع الرقم 
+
+make_pair(123 , "ziad") لو حابب ادخل قيمتين ممكن اعملهم بالطريقه دي 
+مش عارف اي الفايده بس يتم تدوين
+
+لو عندي مثلا زوج عباره عن زوج + حاجه مثلا
+
+pair<string,pair<int,double>> nas;
+علشان اوصل للسترينج هعمل كدا
+
+pair.first
+
+طب الزوج التاني هعمل اي ؟
+pair.second بعدها اختار بقا لو كتبت second تاني كدا هوصل للقيمه ال double
+
+ولو كتبت first هوصل لل int
+ 
+-------------------------------------------------------------------------------------------
+set ---------> بيستقبل ارقام وعناصر غير مكرره وكمان العناصر المستقبله بتبقا مترتبه
+
+وهو مبني على اساس البيناري تري ف هي سريعه وحاجه روعه روعه
+
+worst case time -----> O(log(n))
+
+No random access
+
+set<int> s;
+s.begin() ----> بيشاور ع اول مكان ف السيت
+s.end() -----> بيشاور ع اخر مكان ف السيت
+s.empty() -----> بيرجع هل السيت فاضيه ولا لا 
+s.size() -----> بيطبع طول السيت او عدد العناصر
+set.insert(6) ------> هيضيف 6 للسيت ولو موجوده مش هيعمل حاجه 
+set.emplace(6) -----> نفس اللي هتعمله  الانسيرت
+
+
+auto it = s.begin();
+s.emplace_hint(it,5) ; 
+
+كدا انا قدرت اقلل التايم ازاي ؟
+
+from O(log(n)) to O(1)
+
+s.erase(6) ------> همسح ال 6
+s.find(6) -----------> هيرجع اتيريتور بيشاور ع مكان ال 6
+s.clear() ----------> بيفضي السيت
+s.count(6) ------->  لو موجود عندي هيطبع 1 غير كدا هيطبع 0 ده بالنسبه للسيت لكن المالتي سيت هيطبع التكرار بتاع العنصر
+auto it = s.equal_range(40);
+هيرجع حاجتين القيمة نفسها واكبر قيمة بعدها مباشره وبما انه اتيريتور ف لو عايز القيم هعمل نجمه قبله
+
+set<int,greater<int>> s -------> كدا هيرتبلي العناصر من الكبير للصغير
+
+The std::set::lower_bound() method is used to find the first element in the set that is equal to or greater than the given value.
+In C++, the set upper_bound() is a built-in method used to find the first element in the set that is just greater than the given value.
+set is for read only so no random access or editing it's numbers or strings or any thing
+
+_________________________________________________________________________________________________________________________________________________________________________________________
+
+For the XOR gate if it has more than 2 inputs The output will logic  
+1
+  when the odd number of inputs are logic  
+1
+  and logic  
+0
+  otherwise.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+int findMax(int arr[], int n) {
+    int max = arr[0];
+for (int i = 1; i < n; i++)
+        if (arr[i] > max)
+            max = arr[i];
+return max;
+}
+  علشان الاقي اكبر عنصر ف الاراي 
+_________________________________________________________________________________________________________________________________________________________________________________________
+int findMin(int arr[], int n) {
+    int min = arr[0];
+for (int i = 1; i < n; i++)
+        if (arr[i] < min)
+            min = arr[i];
+return min;
+}
+علشان الاقي اصغر عنصر ف الاراي 
+________________________________________________________________________________________________________
+#define ll long long
+#define nl "\n"
+#define vi vector<int>
+#define sp " "
+#define all(x) (x).begin(), (x).end()
+const double EPS = 1e-9;
+void MOZA()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+}
+
+void solve()
+{
+}
+------------------------------------------------------------------------------------------------
+Sorting Algorithms 
+
+// Iterative (Attirative)  \\
+
+1- Selection Sort
+// How it works: Divides list into sorted (left) and unsorted (right). Repeatedly finds min in unsorted and swaps with first unsorted.
+// Iteration: In iteration i, find min from i to n-1, swap with i.
+// Time: O(n^2) Best/Avg/Worst.
+// Space: O(1).
+
+2- Bubble Sort
+// How it works: Repeatedly swaps adjacent elements if wrong order. Largest element bubbles to end.
+// Iteration: In iteration i, compare adjacent pairs. If left > right, swap. Largest ends up at n-1-i.
+// Time: O(n) Best (optimized), O(n^2) Avg/Worst.
+// Space: O(1).
+
+3- Insertion Sort
+// How it works: Builds sorted array one item at a time. Like sorting cards in hand.
+// Iteration: Take element at i, shift elements in sorted part (0 to i-1) greater than it, insert it.
+// Time: O(n) Best, O(n^2) Avg/Worst.
+// Space: O(1).
+
+// Recursive \\
+
+1- Merge Sort
+// How it works: Divide and Conquer. Splits array in half, sorts halves, merges sorted halves.
+// Iteration: Recursively split until size 1. Merge function combines sorted sub-arrays.
+// Time: O(n log n) all cases.
+// Space: O(n).
+
+2- Quick Sort
+// How it works: Divide and Conquer. Picks pivot, partitions array (smaller left, larger right).
+// Iteration: Partition places pivot in correct spot. Recursively sort left and right.
+// Time: O(n log n) Best/Avg, O(n^2) Worst.
+// Space: O(log n).
+
+// Not Comparison //
+
+1- Counting Sort
+// How it works: Counts occurrences of each key. Uses counts to determine position.
+// Iteration: Build count array, prefix sum, place elements.
+// Time: O(n+k).
+// Space: O(k).
+
+2- Radix Sort
+// How it works: Sorts digit by digit (LSD to MSD) using stable sort (Counting Sort).
+// Iteration: Sort by 1s place, then 10s, etc.
+// Time: O(d(n+k)).
+// Space: O(n+k).
+
+// Comparison Summary //
+// Algorithm      | Best       | Average    | Worst      | Space    | Type
+// Selection      | O(n^2)     | O(n^2)     | O(n^2)     | O(1)     | Iterative
+// Bubble         | O(n)       | O(n^2)     | O(n^2)     | O(1)     | Iterative
+// Insertion      | O(n)       | O(n^2)     | O(n^2)     | O(1)     | Iterative
+// Merge          | O(n log n) | O(n log n) | O(n log n) | O(n)     | Recursive
+// Quick          | O(n log n) | O(n log n) | O(n^2)     | O(log n) | Recursive
+// Counting       | O(n+k)     | O(n+k)     | O(n+k)     | O(k)     | Non-Comparison
+// Radix          | O(d(n+k))  | O(d(n+k))  | O(d(n+k))  | O(n+k)   | Non-Comparison
